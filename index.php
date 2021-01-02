@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/main.css">
+    <!-- <?= time();  ?> -->
+    <link rel="stylesheet" href="styles/main.css?v=<?= time();  ?>">
     <title>Document</title>
 </head>
 <body>
@@ -12,9 +13,9 @@
     <div class="container">
 
         <!-- Navbar -->
-        <nav class="row navbar navbar-expand-lg navbar-dark bg-danger">
-            <a href="#" class="navbar-brand">
-                Restoran
+        <nav class="row navbar navbar-expand-lg navbar-light bg-white rounded-bottom">
+            <a href="#" class="navbar-brand ml-2 resto-tittle">
+                <h2>Fin's Cuisine</h2>
             </a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -23,13 +24,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto mr-3">
                     <li class="nav-item mx-md-2">
-                        <a href="#" class="nav-link">Beranda</a>
+                        <a href="index.php" class="nav-link active">Home</a>
                     </li>
                     <li class="nav-item mx-md-2">
-                        <a href="#" class="nav-link">Reservasi</a>
+                        <a href="booking.php" class="nav-link">Reservation</a>
                     </li>
                     <li class="nav-item mx-md-2">
-                        <a href="#" class="nav-link">Contact</a>
+                        <a href="contact.php" class="nav-link">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -38,28 +39,25 @@
 
     <!-- Header -->
     <header class="text-center">
-            <h1 class="text-white font-weight-bold"> Mau makan? </h1>
-            <p class="text-white">Silahkan booking tempat dan pilih menu terlebih dahulu.</p>
+            <h1 class="text-white font-weight-bold">Enjoy your Dine <br>While we deserve The Fine </h1>
+            <p class="text-white">Just click the button below <br> to start your journey</p>
+            <div class="btn btn-getstarted"><a href="#bookingContent">Get Started</a></div>
     </header>
 
     <main>
         <div class="container">
             <section class="section-stats row justify-content-center" id="stats">
-                <div class="col-3 col-md-2 stats-detail">
-                    <h2>50</h2>
-                    <p>Jumlah Meja</p>
+                <div class="col-4 col-md-2 stats-detail">
+                    <h2>120</h2>
+                    <p>Seats</p>
                 </div>
-                <div class="col-3 col-md-2 stats-detail">
-                    <h2>30</h2>
-                    <p>Ditempati</p>
-                </div>
-                <div class="col-3 col-md-2 stats-detail">
+                <div class="col-4 col-md-2 stats-detail">
                     <h2>5</h2>
-                    <p>Direservasi</p>
+                    <p>Ballrooms</p>
                 </div>
-                <div class="col-3 col-md-2 stats-detail">
-                    <h2>15</h2>
-                    <p>Kosong</p>
+                <div class="col-4 col-md-2 stats-detail">
+                    <h2>500+</h2>
+                    <p>Testimonial</p>
                 </div>
             </section>
         </div>
@@ -112,8 +110,74 @@
             </div>
         </section>
 
+        <section class="section-booking" id="food">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center section-booking-heading">
+                        <h2>Booking Now</h2>
+                        <p>Grab your seat before the other <br>
+                            Just Clicking the button below.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-booking-content" id="bookingContent">
+            <div class="container">
+                <div class="section-booking-image row justify-content-left">
+                    <div class="col-sm-1 col-md-1 col-lg-1">
+                    </div>
+                    <div class="col-sm-5 col-md-5 col-lg-5">
+                        <div class="card-booking text-center d-flex flex-column" style="background-image: url('img/booking.jpg'); ">
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-5 col-md-5 col-lg-5">
+                        <div class="card-booking text-left d-flex flex-column">
+                            <h5>Silahkan tekan tombol dibawah ini untuk :</h5>
+                            <ul>
+                                <li>Reservasi Kursi</li>
+                                <li>Ballroom Booking</li>
+                            </ul>
+                            <h6>or Contact Us for Customize</h6>
+                            <div><a href="booking.php" class="btn btn-getstarted">Booking Now</a></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1 col-md-1 col-lg-1">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-networks" id="networks">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2>Payment Support</h2>
+                        <p>Make sure to check this
+                            <br>
+                            before enjoying food at Fin's
+                        </p>
+                    </div>
+                    <div class="col-md-8 text-center">
+                        <img src="img/gopay.png" alt="logo partner" class="img-partners pr-4" width="180">
+                        <img src="img/ovo.png" alt="logo partner" class="img-partners pr-4" width="180">
+                        <img src="img/paypal.png" alt="logo partner" class="img-partners pr-4">
+                        <img src="img/visa.png" alt="logo partner" class="img-partners">
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
+    <div class="card-footer text-muted">
+        <div class="container">
+         <p class="text-footer text-center">Copyright 2020 <span> Fin's Cuisine</span> <a href="url" target="_blank">Indonesia</a> | <a1 href="url">Surabaya, Jawa TImur</a1></p>
+         
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
